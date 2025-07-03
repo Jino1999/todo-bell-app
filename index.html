@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="minijs.style.css" />
+</head>
+<body>
+  <section id="todo-app">
+    <h2>📝 To-Do List with Alarm</h2>
+
+    <div class="controls">
+      <input type="text" id="taskInput" placeholder="Enter task" />
+      <input type="datetime-local" id="dueDateTime" />
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="playSound(3)">🔔 Test Bell</button>
+      <button id="muteToggle" onclick="toggleMute()">🔔 Sound On</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('done')">Done</button>
+      <button onclick="setFilter('notDone')">Not Done</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="actions">
+      <button onclick="clearAll()">Clear All</button>
+      <button onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+  </section>
+
+  <script src="todo.js"></script>
+</body>
+</html>
